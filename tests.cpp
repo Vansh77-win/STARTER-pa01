@@ -73,6 +73,12 @@ void testForwardIteration() {
   assert(*it == card("s", "5"));
   ++it;
   assert(it == tree.end());
+  ++it;
+  assert(it == tree.end());
+
+  it = tree.begin();
+  --it;
+  assert(it == tree.end());
 }
 
 void testReverseIteration() {
